@@ -1,0 +1,47 @@
+---
+---
+
+$main-color: #bcb
+$size: 30px
+$count-wide: 100
+
+body
+  background-color: lighten($main-color, 20%)
+
+.container
+  display: flex
+  align-items: center
+  justify-content: center
+
+.full-height
+  height: 100vh
+  overflow: hidden
+
+html, body, .cell, .cells
+  margin: 0
+  padding: 0
+
+.cell
+  width: $size
+  height: $size
+  display: inline
+  &::before
+    border: 0.5px solid darken($main-color, 25%)
+    content: ' '
+    width: $size
+    height: $size
+    position: relative
+    z-index: 10
+    float: left
+    background-color: darken($main-color, 0%)
+  &:hover::before
+    background-color: darken($main-color, 5%)
+  &:checked::before
+    background-color: darken($main-color, 10%)
+
+.cells
+  border: 0.5px solid darken($main-color, 25%)
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  width: ($size * $count-wide)

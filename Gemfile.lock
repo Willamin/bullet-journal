@@ -6,6 +6,8 @@ GEM
     colorator (1.1.0)
     ffi (1.9.17)
     forwardable-extended (2.6.0)
+    haml (4.0.7)
+      tilt
     jekyll (3.4.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -17,8 +19,9 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-feed (0.8.0)
-      jekyll (~> 3.3)
+    jekyll-haml (0.1.5)
+      haml (>= 3.0.0)
+      jekyll (>= 3.3.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
     jekyll-watch (1.5.0)
@@ -29,8 +32,6 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
-    minima (2.1.0)
-      jekyll (~> 3.3)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -40,15 +41,14 @@ GEM
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
+    tilt (2.0.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   jekyll (= 3.4.0)
-  jekyll-feed (~> 0.6)
-  minima (~> 2.0)
-  tzinfo-data
+  jekyll-haml
 
 RUBY VERSION
    ruby 2.4.0p0
