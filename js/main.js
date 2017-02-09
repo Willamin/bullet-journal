@@ -81,3 +81,16 @@ var dragCheckbox = function(root) {
 document.addEventListener('DOMContentLoaded',function(){
   dragCheckbox(document)
 })
+
+document.addEventListener('contextmenu', function(e) {
+  comment = document.createElement("span")
+  comment.innerHTML = prompt("You've tried to open context menu at " + e.clientX + ", " + e.clientY, "")
+  comment.style.position = "fixed"
+  comment.style.left = (parseInt((e.clientX + 15)/30)*30 - 15) + "px"
+  comment.style.top = (parseInt((e.clientY + 10)/30)*30 - 10) + "px"
+  comment.style.zIndex = 20
+  comment.style.lineHeight = "30px"
+  comment.style.fontFamily = "sans-serif"
+  document.body.appendChild(comment)
+  e.preventDefault();
+}, false);
