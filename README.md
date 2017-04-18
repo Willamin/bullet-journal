@@ -1,1 +1,1 @@
-# bullet journal
+# checkboxes are fun
